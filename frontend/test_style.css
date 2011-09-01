@@ -1,0 +1,387 @@
+body {
+    
+    font-family: "arial";
+    font-size: 12px;
+	    text-decoration:none;
+	border-style:none;
+	
+}
+
+body  a{
+    text-decoration:none;
+	color: #F5A720;
+}
+a:visited{
+    text-decoration:none;
+	border-style:none;
+    font-family: "arial";
+    font-size: 12px;
+}
+
+img{
+    text-decoration:none;
+	border-style:none;
+}
+
+#container {
+    background-image:url('images/hbg2.jpg');
+    border-color: #F5A720;
+    border-style: solid;
+    border-width: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 995px;
+	overflow: hidden;
+	
+}
+#header {
+    height: 95px;
+	position:relative;
+}
+#banner {
+    
+    color: #F5A720;
+    height: 70px;
+    margin-left: 15px;
+    text-align: left;
+    width: 250px;
+}
+#bannerimg img{
+margin-top:5px;
+width:60px;
+
+}
+#bannerimg{
+display:inline;
+float:left;
+}
+
+#GAds{
+position:absolute;
+top:0px;
+left:225px;
+z-index:100;
+}
+#headtabs{
+background-image:url('images/hbg2.jpg');
+height:30px;
+position:relative;
+
+}
+span.headtabitem{
+background-image:url('images/headtab.jpg');
+height:28px;
+margin:0px;
+font-size:15px;
+border-style:solid;
+border-width:1px;
+border-color:#2F6882;
+display:block;
+cursor:pointer;
+color:#2F6882;
+float:left;
+
+}
+
+span.tablink {
+margin:5px 0 0 5px;
+display:block;
+width:125px;
+}
+
+span.dropmenu{
+display:none;
+position:absolute;
+z-index:110;
+top:30px;
+
+}
+
+div.dropitem{
+background-color:#FBFBEF;
+height:28px;
+padding:5px 0 0 5px;
+font-size:15px;
+border-style:solid;
+border-width:0 1px 1px 1px;
+border-color:#2F6882;
+width:125px;
+position:relative;
+left:-1px;
+}
+
+#selectcitydrop{
+
+}
+#fbbutton{
+float:right;
+padding-top:5px;
+padding-right:10px
+}
+#content {
+    position: relative;
+	background-color: #fdfaef;
+	height:100%;
+	
+}
+#leftcol {
+    background-color: white;
+    display: none;
+    float: left;
+    height: 100%;
+    width: 200px;
+}
+#dateselect {
+    color: #2F6882;
+    float:left;
+    padding: 3px;
+    width: 200px;
+	position:relative;
+}
+span.dateon span.dateind {
+    background-color: #F5A720;
+    display: block;
+    height: 6px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 6px;
+}
+span.dateoff span.dateind {
+    background-color: #F0F5F5;
+    display: block;
+    height: 6px;
+    left: 3px;
+    
+    top: 3px;
+    width: 6px;
+	position: absolute;
+}
+span.dateon {
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    margin: 5px;
+    text-align: right;
+    width: 60px;
+	position:relative;
+	}
+span.dateoff {
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    margin: 5px;
+    text-align: right;
+    width: 60px;
+	position:relative;
+}
+span.datetext {
+    margin-right: 7px;
+    margin-top: 0;
+}
+#setdates a {
+    color: #2F6882;
+    text-decoration: none;
+}
+
+
+#bandlist {
+    float: left;
+    position:relative;
+    text-align: center;
+	width:533px;
+
+
+}
+.scroll-pane
+{
+	width: 569px;
+	height: 475px;
+	overflow: auto;
+}
+
+div.datehead{
+background-color:#F0F5F5;
+	width:533px;
+	border-style:solid;
+	border-color:#eae5d5;
+	border-width:0px 0px 0px 20px;
+}
+.jspPane{
+
+}
+.jspVerticalBar {
+    background: none repeat scroll 0 0 red;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+}
+#playalloption{
+border-width:2px 16px 2px 20px;
+}
+div.event {
+	left:0px;
+    background-color: white;
+    display: block;
+    height: 27px;
+    margin: 0px;
+    position: relative;
+    width: 533px;
+	border-style:solid;
+	border-color:#eae5d5;
+	border-width:2px 0px 2px 20px;
+	z-index:100;
+}
+div.event span {
+    height: 100%;
+    margin-bottom: auto;
+    margin-top: auto;
+    position: absolute;
+    text-align: left;
+}
+span.play {
+    left: 0;
+    top: 10px;
+}
+span.play img {
+    left: 2px;
+    top: 0;
+    width: 13px;
+}
+span.noplay {
+}
+span.artist {
+    height: 100%;
+    left: 15px;
+    overflow: hidden;
+    top: 8px;
+    white-space: nowrap;
+    width: 135px;
+}
+span.venue {
+    font-size: 10px;
+    left: 155px;
+    overflow: hidden;
+    top: 1px;
+    white-space: nowrap;
+    width: 150px;
+}
+span.datetime {
+    font-size: 10px;
+    left: 155px;
+    overflow: hidden;
+    right: 35px;
+    top: 15px;
+    white-space: nowrap;
+    width: 150px;
+}
+span.gcal {
+    left: 350px;
+}
+span.gcal img {
+    width: 25px;
+}
+span.ical {
+    left: 380px;
+}
+span.tickets {
+    left: 410px;
+}
+span.vote {
+	height:25px;
+    left: 435px;
+	z-index:50;
+	#display:none;
+}
+span.vote img{
+height:25px;
+}
+span.votetan {
+
+    left: 435px;
+	width:25px;
+	height:25px;
+	background-color:#EAE5D5;
+	z-index:5;
+	#display:none;
+	}
+	
+span.votegreen {
+
+
+    left: 435px;
+	width:25px;
+	height:25px;
+	background-color:green;
+	z-index:10;
+	#display:none;
+}
+span.voteyellow {
+
+
+    left: 435px;
+	width:25px;
+	height:25px;
+	background-color:yellow;
+	z-index:15;
+	#display:none;
+}
+
+#player {
+    background-color: #2F6882;
+    border-color: #F5A720;
+    border-style: solid;
+    border-width: 2px;
+    float: right;
+	width:214px;
+	white-space: nowrap;
+	overflow: hidden;
+	#position:absolute;
+	left:00px;
+}
+#playerhead div {
+    background-color: #F0F5F5;
+    color: #2F6882;
+    margin: 3px;
+	width:210px;	
+	white-space: nowrap;
+	overflow: hidden;
+}
+#playall a {
+    color: black;
+    display: inline;
+    text-decoration: none;
+    vertical-align: middle;
+}
+#playall {
+	position:absolute;
+	top:7px;
+	left:350px;
+    color: black;
+        z-index: 100;
+}
+#playhead {
+    font-size:15;
+	margin-left:10px;
+	
+}
+
+#footer{
+height:65px;
+border-style:solid;
+border-width:5px 0 0 0;
+border-color:#eae5d5;
+
+}
+
+#fblike{
+position:relative;
+left:650px;
+top:10px;
+background-color:#aed2e1;
+width:300px;
+
+}
+
