@@ -155,14 +155,14 @@ def	load_DB():
 	global eventdict
 	global DBcity
 	start_date=datetime.date.today().strftime("%Y-%m-%d")
-	conn = MySQLdb.connect (host = "localhost",
-                           user = "root",
-                           passwd = "cradle69",
-                           db = "bnm")
+	conn = MySQLdb.connect (host = "beatloaf.net",
+							user = "beatloaf_update",
+                           passwd = "updcradle69",
+                           db = "beatloaf_BNM")
 	cursor = conn.cursor ()
 	
 	
-	sql="DELETE FROM `bnm`.`event` where (date < '"+start_date+"') = 1 and city='"+DBcity['name']+"';"
+	sql="DELETE FROM `beatloaf_BNM`.`event` where (date < '"+start_date+"') = 1 and city='"+DBcity['name']+"';"
 	cursor.execute (sql)
 	for eventkey in eventdict.keys():
 		try:
@@ -186,10 +186,10 @@ def	load_DB():
 global DBcity
 global eventdict
 eventdict={}
-conn = MySQLdb.connect (host = "localhost",
-							user = "root",
-                           passwd = "cradle69",
-                           db = "bnm")
+conn = MySQLdb.connect (host = "beatloaf.net",
+							user = "beatloaf_update",
+                           passwd = "updcradle69",
+                           db = "beatloaf_BNM")
 cursor = conn.cursor ()
 #sql="DELETE FROM `bnm`.`artists` where asongs like '[]' ;"
 #cursor.execute (sql)

@@ -161,14 +161,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 <div id='content'><div id='leftcol'></div>
 <?php
-	$con = mysql_connect('127.0.0.1', 'root', 'cradle69');
+	$con = mysql_connect('beatloaf.net', 'beatloaf_update', 'updcradle69');
 	if (!$con)
 	{
 		die('Could not connect: ' . mysql_error());
 	}
 	echo '<div id="dateselect"><h3>Select Dates</h3>';
 
-	$sql="SELECT DISTINCT date FROM `bnm`.`event`  where  event.city like '".$db_name."' order by date;";//  where aid like '".$_GET['aid']."';";
+	$sql="SELECT DISTINCT date FROM `beatloaf_BNM`.`event`  where  event.city like '".$db_name."' order by date;";//  where aid like '".$_GET['aid']."';";
 	//echo $sql;
 	$dateresult = mysql_query($sql);
 	
@@ -209,7 +209,7 @@ if ($_GET['dates'] != ''){
 	//echo $wstring;
 
 
-	mysql_select_db("bnm", $con);
+	mysql_select_db("beatloaf_BNM", $con);
 		// "SELECT family.Position, food.Meal ". "FROM family LEFT JOIN food ".	"ON family.Position = food.Position"; 
 	$sql="select * from event  LEFT JOIN  artists on event.name like artists.idartists where city like '".$db_name."'".$wstring." order by date, rating desc, name;";//  where aid like '".$_GET['aid']."';";
 	//echo $sql;
