@@ -201,6 +201,10 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 $wstring='';
 if ($_GET['dates'] != ''){
 	$datestring=explode(",",$_GET['dates']);
+	$dimax=count($datestring);
+	for ($di=0; $di<$dimax; $di++) {
+		$datestring[$di] = substr($datestring[$di],0,10);
+	}
 	$datestring=implode("' OR date like '",$datestring);
 	
 	//echo $datestring;
@@ -286,7 +290,7 @@ if ($_GET['dates'] != ''){
 		echo "</span><span class='gcal'>";
 		
 		echo '<a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text='.$row['name'].' at '.$row['venue'].'&amp;dates='.str_replace("-","",$row['date']).'/'.(str_replace("-","",$row['date'])+1).'&amp;location='.$row['venue'].'&amp;trp=false&sprop=wadd&sprop=name:BeatLoaf" target="_blank"><img src="images/GoogleCalendar_small.jpg" border=0 alt="Add to Gooogle Calendar"></a></span>';
-		echo '<span class="ical"><a href="make_ics.php?date='.str_replace("-","",$row['date']).'&amp;artist='.$row['name'].' at '.$row['venue'].'"><img src="/images/iCal-icon.png" alt="Add to iCal our Outlook"></a>';
+		echo '<span class="ical"><a href="make_ics.php?date='.str_replace("-","",$row['date']).'&amp;artist='.$row['name'].' at '.$row['venue'].'"><img src="images/iCal-icon.png" alt="Add to iCal our Outlook"></a>';
 		echo "</span><span class='tickets'>";
 		if ($row['ticket_url'] != ''){
 		echo "<a href='".$row['ticket_url']."?affil_code=BeatLoaf'><img src='images/ticket.png' alt='Buy Tickets'></a>";
