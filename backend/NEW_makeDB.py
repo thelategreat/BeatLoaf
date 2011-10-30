@@ -191,8 +191,8 @@ conn = MySQLdb.connect (host = "beatloaf.net",
                            passwd = "updcradle69",
                            db = "beatloaf_BNM")
 cursor = conn.cursor ()
-#sql="DELETE FROM `bnm`.`artists` where asongs like '[]' ;"
-#cursor.execute (sql)
+sql="DELETE FROM `beatloaf_BNM`.`artists` where asongs like '[]' ;"
+cursor.execute (sql)
 cursor.close ()
 conn.commit ()
 conn.close ()
