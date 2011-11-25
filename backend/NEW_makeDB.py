@@ -107,7 +107,7 @@ def check_artistDB():
     conn = MySQLdb.connect (host = "beatloaf.net",
                             user = "beatloaf_update",
                         passwd = "updcradle69",
-                        db = "beatloaf_BNM")
+                        db = "beatloaf_BNM") 
     cursor = conn.cursor ()
     
     
