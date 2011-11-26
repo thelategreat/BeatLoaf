@@ -1,3 +1,4 @@
+#!/usr/bin/python
 #http://api.bandsintown.com/events/search?location=abq,IL&radius=10&format=xml&date=2011-04-03&app_id=YOUR_APP_ID
 #http://tinysong.com/s/Beethoven?format=json&limit=32&key=b95b463bb8b995ba3a66d0b9e187273a
 #yyyy-mm-dd,yyyy-mm-dd 
@@ -102,10 +103,10 @@ def get_remote_info():
 def check_artistDB():
 	global eventdict
 	global DBcity
-	conn = MySQLdb.connect (host = "localhost",
-							user = "root",
-                           passwd = "cradle69",
-                           db = "bnm")
+	conn = MySQLdb.connect (host = "beatloaf.net",
+							user = "beatloaf_update",
+                           passwd = "updcradle69",
+                           db = "beatloaf_BNM")
 	cursor = conn.cursor ()
 	
 	
@@ -144,7 +145,7 @@ def check_artistDB():
 				print "creating entry for:"+name
 				songs=get_songs(name)
 				eventdict[keyname]['songID']=songs
-				sql="INSERT into bnm.artists(idartists, asongs, refresh_date) VALUES('"+name+"','"+json.dumps(songs)+"','"+str(time.time())+"')"
+				sql="INSERT into artists(idartists, asongs, refresh_date) VALUES('"+name+"','"+json.dumps(songs)+"','"+str(time.time())+"')"
 				cursor.execute (sql)
 	cursor.close ()
 	conn.commit ()
